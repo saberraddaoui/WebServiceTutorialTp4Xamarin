@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ x:Class="WebServiceTutorial.MainPage" BackgroundImageSource="bg.jpg" WidthRequest="20" HeightRequest="20">
+
+    <Grid Margin="20,35,20,20"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+         </Grid.RowDefinitions>
+        <Label Text="Weather Application Project"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="BLUE"
+               Grid.ColumnSpan="2"/>
+        <Entry x:Name="cityEntry"
+               Grid.ColumnSpan="2"
+               Grid.Row="1"
+               Placeholder="Enter Your Location"/>
+        <Button Grid.ColumnSpan="2"
+               Grid.Row="2"
+               Text="Get Weather" 
+               BackgroundColor="White"
+               Clicked="OnButtonClicked" />
+        <Label Grid.Row="3"
+               Text="Location:"/>
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding Title}" />
+        <Label Grid.Row="4"
+               Text="Temperature:" />
+        <Label Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding Main.Temperature}" />
+        <Label Grid.Row="5"
+               Text="Wind Speed:" />
+        <Label Grid.Row="5"
+               Grid.Column="1"
+               Text="{Binding Wind.Speed}" />
+        <Label Grid.Row="6"
+               Text="Humidity:" />
+        <Label Grid.Row="6"
+               Grid.Column="1"
+               Text="{Binding Main.Humidity}" />
+        <Label Grid.Row="7"
+               Text="Visibility:" />
+        <Label Grid.Row="7"
+               Grid.Column="1"
+               Text="{Binding Weather[0].Visibility}" />
+        <Label Text="Copyright 2022"
+               HorizontalOptions="Center"
+               FontSize="Large"
+               FontAttributes="Italic"
+               Grid.ColumnSpan="2"
+               Grid.Row="8"/>
+        <Label Text="SABER RADDAOUI DSI 31"
+               HorizontalOptions="Center"
+               FontSize="Large"
+               TextColor="black"
+               TextDecorations="Underline"
+               FontAttributes="Italic"
+               Grid.ColumnSpan="2"
+               Grid.Row="9"/>
+    </Grid>
+</ContentPage>
